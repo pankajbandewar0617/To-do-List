@@ -1,8 +1,8 @@
-// var data = [];
-var form = document.getElementById('addForm');
-var itemList = document.getElementById('items');
-var check = document.getElementById('items');
-var itemdrag = document.getElementById('items')
+// const data = [];
+const form = document.getElementById('addForm');
+const itemList = document.getElementById('items');
+const check = document.getElementById('items');
+const itemdrag = document.getElementById('items')
 let itemsArray = []
 
 // Form submit event
