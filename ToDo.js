@@ -84,6 +84,12 @@ function addItem(e) {
     e.preventDefault()
 
     const newItem = document.getElementById('item').value;
+
+    for (let i of itemsArray) {
+        if (newItem === i['item']) {
+            return
+        }
+    }
     if (newItem) {
         let obj = { 'item': newItem, 'status': false }
         itemsArray.push(obj)
@@ -98,7 +104,7 @@ function checkItems(e) {
     let li = e.target.parentElement;
     let index = li.getAttribute('position');
     itemsArray[index]['status'] = e.target.checked;
-    
+
     saveLocalStorage()
 }
 
